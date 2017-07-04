@@ -90,7 +90,9 @@ app.post('/api/actor', (req, res) => {
 		if(err){
 			throw err;
 		}
-		res.json(actor);
+		actor.Response= " Actor"+actor.name+" Added sucessfully with id " + actor._id;
+		res.send(actor);
+		
 	});
 });
 app.get('/api/actor', (req, res) => {
