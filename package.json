@@ -1,0 +1,30 @@
+{
+  "name": "esg",
+  "version": "1.0.0",
+  "description": "esg is movies library app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*",
+    "mongoose": "*",
+    "mongodb": "*"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "author": "abhilash",
+  "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbhilashBiradar/Node_ESG_ExpressBackEnd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AbhilashBiradar/Node_ESG_ExpressBackEnd/issues"
+  },
+  "homepage": "https://github.com/AbhilashBiradar/Node_ESG_ExpressBackEnd#readme"
+}
