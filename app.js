@@ -43,6 +43,8 @@ app.get('/api/users', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(users);
 	});
 });
@@ -51,6 +53,8 @@ app.get('/api/users/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(user);
 	});
 });
@@ -60,6 +64,8 @@ app.post('/api/users', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(users);
 	});
 });
@@ -71,6 +77,8 @@ app.put('/api/users/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(users);
 	});
 });
@@ -81,6 +89,8 @@ app.delete('/api/users/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(users);
 	});
 });
@@ -91,8 +101,11 @@ app.post('/api/actor', (req, res) => {
 		if(err){
 			throw err;
 		}
-		actor.Response= " Actor"+actor.name+" Added sucessfully with id " + actor._id;
-		res.send({"actor":actor});
+		var message= " Actor"+actor.name+" Added sucessfully with id " + actor._id;
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+		res.send({"actor":actor,
+			 "Response":message });
 		
 	});
 });
@@ -103,7 +116,6 @@ app.get('/api/actor', (req, res) => {
 		}
 		res.header("Access-Control-Allow-Origin", "*");
                 res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-
 		res.send({"actor":actor});
 	});
 });
@@ -112,6 +124,8 @@ app.get('/api/actor/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(actor);
 	});
 });
@@ -122,6 +136,8 @@ app.put('/api/actor/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(actor);
 	});
 });
@@ -132,6 +148,8 @@ app.delete('/api/actor/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(actor);
 	});
 }); 
@@ -141,6 +159,8 @@ app.post('/api/news', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(news);
 	});
 });
@@ -149,6 +169,8 @@ app.get('/api/news', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(news);
 	});
 });
@@ -157,6 +179,8 @@ app.get('/api/news/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(news);
 	});
 });
@@ -167,6 +191,8 @@ app.put('/api/news/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(news);
 	});
 });
@@ -177,6 +203,8 @@ app.delete('/api/news/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(news);
 	});
 });
@@ -186,6 +214,8 @@ app.post('/api/movie', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(movie);
 	});
 });
@@ -194,6 +224,8 @@ app.get('/api/movies', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(movie);
 	});
 });
@@ -203,6 +235,8 @@ app.get('/api/movie/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(movie);
 	});
 });
@@ -212,6 +246,8 @@ app.get('/api/movies/actor/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(movie);
 	});
 });
@@ -221,6 +257,8 @@ app.get('/api/movies/name/:_Name', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(movie);
 	});
 });
@@ -231,6 +269,8 @@ app.put('/api/movie/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(movie);
 	});
 });
@@ -241,6 +281,8 @@ app.delete('/api/movie/:_id', (req, res) => {
 		if(err){
 			throw err;
 		}
+		res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 		res.json(movie);
 	});
 });
