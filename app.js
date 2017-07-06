@@ -91,7 +91,7 @@ app.post('/api/actor', (req, res) => {
 			throw err;
 		}
 		actor.Response= " Actor"+actor.name+" Added sucessfully with id " + actor._id;
-		res.send(actor);
+		res.json("actor":actor);
 		
 	});
 });
